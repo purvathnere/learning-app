@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .quiz-container {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Simple Quiz</h1>
+        <div>Candidate Name : <span id="quizUser"></span></div>
+        <div id="timer">Time remaining: 5:00</div>
+        <div id="result"></div>
+        <form id="quiz-form">
+            <ol>
+                <li>
+                    <h3>Question 1: What is the correct way to print "Hello, World!" to the console in Java?</h3>
+                    <input type="radio" name="q1" value="a"> a) print("Hello, World!");<br>
+                    <input type="radio" name="q1" value="b"> b) System.print("Hello, World!");<br>
+                    <input type="radio" name="q1" value="c"> c) System.out.println("Hello, World!");<br>
+                    <input type="radio" name="q1" value="d"> d) console.log("Hello, World!");<br>
+                </li>
+
+                <li>
+                    <h3>Question 2: What is the correct way to print "Hello, World!" to the console in Java?</h3>
+                    <input type="radio" name="q2" value="a"> a) System.out.println("Hello, World!");<br>
+                    <input type="radio" name="q2" value="b"> b) System.print("Hello, World!");<br>
+                    <input type="radio" name="q2" value="c"> c) println("Hello, World!");<br>
+                    <input type="radio" name="q2" value="d"> d) console.log("Hello, World!");<br>
+                </li>
+
+                <li>
+                    <h3>Question 3: What is the correct way to print "Hello, World!" to the console in Java?</h3>
+                    <input type="radio" name="q3" value="a"> a) print("Hello, World!");<br>
+                    <input type="radio" name="q3" value="b"> b) System.out.println("Hello, World!");<br>
+                    <input type="radio" name="q3" value="c"> c) SystemOutPrintln("Hello, World!");<br>
+                    <input type="radio" name="q3" value="d"> d) console.log("Hello, World!");<br>
+                </li>
+
+                <li>
+                    <h3>Question 4: What is the correct way to print "Hello, World!" to the console in Java?</h3>
+                    <input type="radio" name="q4" value="a"> a) print("Hello, World!");<br>
+                    <input type="radio" name="q4" value="b"> b) System.print("Hello, World!");<br>
+                    <input type="radio" name="q4" value="c"> c) System.out.println("Hello, World!");<br>
+                    <input type="radio" name="q4" value="d"> d) console.log("Hello, World!");<br>
+                </li>
+
+                <li>
+                    <h3>Question 5: What is the correct way to print "Hello, World!" to the console in Java?</h3>
+                    <input type="radio" name="q5" value="a"> a) print("Hello, World!");<br>
+                    <input type="radio" name="q5" value="b"> b) System.print("Hello, World!");<br>
+                    <input type="radio" name="q5" value="c"> c) System.out("Hello, World!");<br>
+                    <input type="radio" name="q5" value="d"> d) System.out.println("Hello, World!");<br>
+                </li>
+                <!-- Repeat similar structures for other questions -->
+            </ol>
+            <input type="submit" value="Submit">
+        </form>
+        
+    </div>
+
+    <script>
+        // JavaScript for countdown timer
+        const countdown = document.getElementById('timer');
+        let timeLeft = 300; // 5 minutes in seconds
+
+        function updateTimer() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            countdown.textContent = `Time remaining: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            if (timeLeft === 0) {
+                clearInterval(timerInterval);
+                submitQuiz();
+            }
+            timeLeft--;
+        }
+
+        const timerInterval = setInterval(updateTimer, 1000);
+
+        // JavaScript for quiz submission and result
+        const quizForm = document.getElementById('quiz-form');
+        const resultDisplay = document.getElementById('result');
+
+        quizForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            clearInterval(timerInterval); // Stop the timer
+            submitQuiz();
+        });
+
+        function submitQuiz() {
+            // Calculate and display the result
+            const score = calculateScore();
+            resultDisplay.textContent = `You scored ${score} out of 5.`;
+        }
+
+        function calculateScore() {
+            let score = 0;
+            const answers = ['c', 'a', 'b', 'c', 'd']; // Add correct answers for each question
+
+            for (let i = 1; i <= 5; i++) {
+                const selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selectedAnswer) {
+                    if (selectedAnswer.value === answers[i - 1]) {
+                        score++;
+                    }
+                }
+            }
+
+            return score;
+        }
+
+        let user_name=localStorage.getItem("user-name")
+        document.getElementById("quizUser").innerText = user_name;
+    </script>
+</body>
+</html>

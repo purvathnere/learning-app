@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Learing Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/tutorial.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid topmenu">
+            <div class="container">
+                <div class="row">
+                    <nav class="navbar navbar-expand-lg col-7">
+                        <div class="container">
+                            <button class="navbar-toggler bg-primary text-dark" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContentTop" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContentTop">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#main">English</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link">|</a></li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#main">हिंदी</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link">|</a></li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#main">Sitemap</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link">|</a></li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#main">Contact us</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link">|</a></li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#main">Feedback</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link">|</a></li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#main">FAQ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+    
+                    <nav class="navbar navbar-expand-md col-5">
+                        <div class="container">
+                            <div class="d-none d-md-flex align-items-center">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a href="https://www.facebook.com/#" target="_blank" 
+                                        class="nav-link facebook" title="Facebook">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://twitter.com/#" target="_blank"
+                                        class="nav-link twitter" title="Twitter">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.youtube.com/#" target="_blank"
+                                        class="nav-link youtube" title="YouTube">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.instagram.com/#" target="_blank"
+                                        class="nav-link instagram" title="Instagram">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a tabindex="0" style="cursor:pointer;" id="Ainc"
+                                            title="Font size increase" class="nav-link">A+</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a tabindex="0" style="cursor:pointer;" id="Arest"
+                                            title="Normal font size" class="nav-link">A</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a tabindex="0" style="cursor:pointer;" id="Adec"
+                                            title="Font size decrease" class="nav-link">A-</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#main" title="Skip to main content" class="nav-link">
+                                            <span class="skiptomains">Skip to main content</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">[name/logo]</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contactus">Contact</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tutorials" tabindex="-1" aria-disabled="true">Tutorials</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <button class="btn btn-outline-danger m-1" onclick="logout()"> Log Out</button>
+                </div>
+            </div>
+        </nav>
+        <div id="loging" class="container-fluid text-white">
+            <h4 class="text-left">Welcome: <span id="userName"></span></h4>
+        </div>
+    </header>
+
+
+
+    <div class="carousel">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <ul>
+                        <li><i class="fab fa-java"></i> Java</li>
+                        <li><i class="fab fa-python"></i> Python</li>
+                        <li><i class="fab fa-c"></i> C</li>
+                        <li><i class="fab fa-cplusplus"></i> C++</li>
+                        <li><i class="fab fa-js"></i> JavaScript</li>
+                        <li><i class="fab fa-node"></i> Node.js</li>
+                        <li><i class="fab fa-html5"></i> HTML</li>
+                    </ul>
+                </div>
+                <div class="carousel-item">
+                    <ul>
+                        <li><i class="fab fa-css3"></i> CSS</li>
+                        <li><i class="fab fa-php"></i> PHP</li>
+                        <li><i class="fab fa-react"></i> React</li>
+                        <li><i class="fab fa-angular"></i> Angular</li>
+                        <li><i class="fab fa-python"></i> Django</li>
+                        <li><i class="fab fa-node"></i> Node.js</li>
+                    </ul>
+                </div>
+                <div class="carousel-item">
+                    <ul>
+                        <li><i class="fab fa-java"></i> Java</li>
+                        <li><i class="fab fa-python"></i> Python</li>
+                        <li><i class="fab fa-angular"></i> Angular</li>
+                        <li><i class="fab fa-python"></i> Django</li>
+                        <li><i class="fab fa-js"></i> JavaScript</li>
+                        <li><i class="fab fa-html5"></i> HTML</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,32L7.7,42.7C15.5,53,31,75,46,74.7C61.9,75,77,53,93,53.3C108.4,53,124,75,139,101.3C154.8,128,170,160,186,176C201.3,192,217,192,232,202.7C247.7,213,263,235,279,202.7C294.2,171,310,85,325,53.3C340.6,21,356,43,372,48C387.1,53,403,43,418,64C433.5,85,449,139,465,186.7C480,235,495,277,511,245.3C526.5,213,542,107,557,74.7C572.9,43,588,85,604,128C619.4,171,635,213,650,202.7C665.8,192,681,128,697,96C712.3,64,728,64,743,74.7C758.7,85,774,107,790,101.3C805.2,96,821,64,836,80C851.6,96,867,160,883,197.3C898.1,235,914,245,929,224C944.5,203,960,149,975,122.7C991,96,1006,96,1022,128C1037.4,160,1053,224,1068,256C1083.9,288,1099,288,1115,256C1130.3,224,1146,160,1161,149.3C1176.8,139,1192,181,1208,170.7C1223.2,160,1239,96,1254,74.7C1269.7,53,1285,75,1301,122.7C1316.1,171,1332,245,1347,266.7C1362.6,288,1378,256,1394,240C1409,224,1425,224,1432,224L1440,224L1440,0L1432.3,0C1424.5,0,1409,0,1394,0C1378.1,0,1363,0,1347,0C1331.6,0,1316,0,1301,0C1285.2,0,1270,0,1254,0C1238.7,0,1223,0,1208,0C1192.3,0,1177,0,1161,0C1145.8,0,1130,0,1115,0C1099.4,0,1084,0,1068,0C1052.9,0,1037,0,1022,0C1006.5,0,991,0,975,0C960,0,945,0,929,0C913.5,0,898,0,883,0C867.1,0,852,0,836,0C820.6,0,805,0,790,0C774.2,0,759,0,743,0C727.7,0,712,0,697,0C681.3,0,666,0,650,0C634.8,0,619,0,604,0C588.4,0,573,0,557,0C541.9,0,526,0,511,0C495.5,0,480,0,465,0C449,0,434,0,418,0C402.6,0,387,0,372,0C356.1,0,341,0,325,0C309.7,0,294,0,279,0C263.2,0,248,0,232,0C216.8,0,201,0,186,0C170.3,0,155,0,139,0C123.9,0,108,0,93,0C77.4,0,62,0,46,0C31,0,15,0,8,0L0,0Z"></path></svg>
+
+    <section class="tutorial" id="tutorials">
+        <h1 class="text-center">Some specific Topics</h1>
+        <div class="container-lg">
+            <div class="row">
+                <div id="details1" class="col-md-3 col-sm-4">
+                    <details>
+                        <summary>
+                            <div class="card">
+                                <li><i class="fab fa-java"></i> Java</li>
+                            </div>
+                        </summary>
+                        <a href="https://www.youtube.com/watch?v=ntLJmHOJ0ME&list=PLu0W_9lII9agS67Uits0UnJyrYiXhDS6q"
+                            target="_cs">Code with Harry</a>
+                        <a href="https://www.youtube.com/watch?v=yRpLlJmRo2w&list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop"
+                            target="_cs">Java-Apna College</a>
+                        <a href="https://www.youtube.com/watch?v=MT6J2oqxPow&list=PLjVLYmrlmjGd3K6Ltqbee7sfKfZj92GSX"
+                            target="_cs">Java-WsCube Tech</a>
+                        <a href="https://www.javatpoint.com/java-tutorial" target="_cs">Java - javatpoint</a>
+                        <a href="https://www.w3schools.com/java/" target="_cs">java -w3school</a>
+                        <a href="assets/pages/test.html" target="_cs">Simpal Quiz</a>
+                    </details>
+                </div>
+                <div id="details2" class="col-md-3 col-sm-4">
+                    <details>
+                        <summary>
+                            <div class="card">
+                                <li><i class="fab fa-python"></i> Python</li>
+
+                            </div>
+                        </summary>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                    </details>
+                </div>
+                <div id="details3" class="col-md-3 col-sm-4">
+                    <details>
+                        <summary>
+                            <div class="card">
+                                <li><i class="fab fa-js"></i> JavaScript</li>
+
+                            </div>
+                        </summary>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                    </details>
+                </div>
+                <div id="details4" class="col-md-3 col-sm-4">
+                    <details>
+                        <summary>
+                            <div class="card">
+                                <li><i class="fab fa-html5"></i> HTML</li>
+
+                            </div>
+                        </summary>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                    </details>
+                </div>
+
+                <div id="details1" class="col-md-3 col-sm-4">
+                    <details>
+                        <summary>
+                            <div class="card">
+                                <li><i class="fab fa-css3"></i> CSS</li>
+
+                            </div>
+                        </summary>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                    </details>
+                </div>
+                <div id="details2" class="col-md-3 col-sm-4">
+                    <details>
+                        <summary>
+                            <div class="card">
+                                <li><i class="fab fa-php"></i> PHP</li>
+
+                            </div>
+                        </summary>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                    </details>
+                </div>
+                <div id="details3" class="col-md-3 col-sm-4">
+                    <details>
+                        <summary>
+                            <div class="card">
+                                <li><i class="fab fa-react"></i> React</li>
+
+                            </div>
+                        </summary>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                    </details>
+                </div>
+                <div id="details4" class="col-md-3 col-sm-4">
+                    <details>
+                        <summary>
+                            <div class="card">
+                                <li><i class="fab fa-angular"></i> Angular</li>
+
+                            </div>
+                        </summary>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                    </details>
+                </div>
+
+                <div id="details1" class="col-md-3 col-sm-4">
+                    <details>
+                        <summary>
+                            <div class="card">
+                                <li><i class="fab fa-node-js"></i> Node.js</li>
+                            </div>
+                        </summary>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                    </details>
+                </div>
+                <div id="details2" class="col-md-3 col-sm-4">
+                    <details>
+                        <summary>
+                            <div class="card">
+                                <li><i class="fab fa-python"></i> Django</li>
+                            </div>
+                        </summary>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                    </details>
+                </div>
+                <div id="details3" class="col-md-3 col-sm-4">
+                    <details>
+                        <summary>
+                            <div class="card">
+                                <li><i class="fab fa-swift"></i>Swift</li>
+
+                            </div>
+                        </summary>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                    </details>
+                </div>
+                <div id="details4" class="col-md-3 col-sm-4">
+                    <details>
+                        <summary>
+                            <div class="card">
+                                <li> <i class="fas fa-gem"></i>Ruby</li>
+                            </div>
+                        </summary>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                        <a href="http://" target="_cs">click</a>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="svg-1">
+        <path fill="#0099ff" fill-opacity="1"
+            d="M0,96L17.1,112C34.3,128,69,160,103,165.3C137.1,171,171,149,206,170.7C240,192,274,256,309,261.3C342.9,267,377,213,411,176C445.7,139,480,117,514,122.7C548.6,128,583,160,617,170.7C651.4,181,686,171,720,186.7C754.3,203,789,245,823,250.7C857.1,256,891,224,926,186.7C960,149,994,107,1029,96C1062.9,85,1097,107,1131,117.3C1165.7,128,1200,128,1234,138.7C1268.6,149,1303,171,1337,186.7C1371.4,203,1406,213,1423,218.7L1440,224L1440,320L1422.9,320C1405.7,320,1371,320,1337,320C1302.9,320,1269,320,1234,320C1200,320,1166,320,1131,320C1097.1,320,1063,320,1029,320C994.3,320,960,320,926,320C891.4,320,857,320,823,320C788.6,320,754,320,720,320C685.7,320,651,320,617,320C582.9,320,549,320,514,320C480,320,446,320,411,320C377.1,320,343,320,309,320C274.3,320,240,320,206,320C171.4,320,137,320,103,320C68.6,320,34,320,17,320L0,320Z">
+        </path>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#0099ff" fill-opacity="1"
+            d="M0,96L17.1,112C34.3,128,69,160,103,165.3C137.1,171,171,149,206,170.7C240,192,274,256,309,261.3C342.9,267,377,213,411,176C445.7,139,480,117,514,122.7C548.6,128,583,160,617,170.7C651.4,181,686,171,720,186.7C754.3,203,789,245,823,250.7C857.1,256,891,224,926,186.7C960,149,994,107,1029,96C1062.9,85,1097,107,1131,117.3C1165.7,128,1200,128,1234,138.7C1268.6,149,1303,171,1337,186.7C1371.4,203,1406,213,1423,218.7L1440,224L1440,0L1422.9,0C1405.7,0,1371,0,1337,0C1302.9,0,1269,0,1234,0C1200,0,1166,0,1131,0C1097.1,0,1063,0,1029,0C994.3,0,960,0,926,0C891.4,0,857,0,823,0C788.6,0,754,0,720,0C685.7,0,651,0,617,0C582.9,0,549,0,514,0C480,0,446,0,411,0C377.1,0,343,0,309,0C274.3,0,240,0,206,0C171.4,0,137,0,103,0C68.6,0,34,0,17,0L0,0Z">
+        </path>
+    </svg>
+
+    <div class="container-fluid">
+
+        <div id="about">
+            <h1 class="text-center text-primary">About</h1>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Personalized learning is an educational approach that tailors instruction and learning experiences to
+                meet
+                the individual needs, interests, and abilities of each learner. This approach recognizes that every
+                student
+                is unique and, therefore, may benefit from different strategies, content, and pacing. Personalized
+                learning
+                aims to enhance student engagement, motivation, and overall learning outcomes. Here are some key aspects
+                of
+                personalized learning:
+                <br>
+                </br><strong>1 Individualized Instruction:</strong> Personalized learning focuses on adapting
+                instruction to
+                the specific needs of each student. This can involve customizing the content, learning materials, and
+                pace
+                of learning based on the student's abilities and progress.
+                </br><strong>2 Student-Centered Approach:</strong> In a personalized learning environment, the student
+                takes
+                an active role in their own learning. They have some degree of control over what and how they learn,
+                allowing them to pursue their interests and passions.
+                </br><strong>3 Data and Assessment:</strong> Personalized learning often relies on data and ongoing
+                assessment to inform instruction. Teachers or educational technology tools gather data on student
+                performance to provide timely feedback and adjust the learning path accordingly.
+                </br><strong>4 Flexible Learning Paths:</strong> Personalized learning recognizes that students may not
+                all
+                progress at the same rate. It allows for flexible learning paths, where students can accelerate in areas
+                they excel in or receive additional support in areas where they struggle.
+                </br><strong>5 Technology Integration:</strong> Technology often plays a significant role in
+                personalized
+                learning. Online platforms, adaptive software, and learning analytics help educators track progress and
+                provide targeted resources.
+                </br><strong>6 Teacher Facilitation:</strong> While personalized learning empowers students to take
+                control
+                of their learning, teachers play a crucial role as facilitators and guides. They provide support,
+                mentorship, and encouragement, helping students set goals and make informed choices.
+                </br><strong>7 Adaptive Content:</strong> Adaptive learning platforms use algorithms to adjust content
+                and
+                activities based on a student's performance and preferences. This allows for a highly individualized
+                learning experience.
+                </br><strong>8 Interest-Driven Learning:</strong> Personalized learning encourages students to pursue
+                topics
+                that interest them, fostering intrinsic motivation and a love for learning.
+                </br><strong>9 Differentiated Instruction:</strong> Teachers differentiate instruction by tailoring
+                activities, materials, and assessments to match students' readiness levels, interests, and learning
+                profiles.
+
+                </br><strong>10 Competency-Based Education:</strong> In personalized learning, students often progress
+                based
+                on demonstrated mastery of skills or knowledge rather than adhering to a fixed schedule.
+
+                </br><strong>11 Feedback and Reflection:</strong> Regular feedback and opportunities for reflection are
+                essential components of personalized learning. Students learn to self-assess and set goals for
+                improvement.
+
+                </br><strong>12 Collaborative Learning:</strong> Personalized learning can include collaborative
+                projects
+                and peer learning opportunities to enhance social interaction and communication skills.
+
+                </br><strong>13 Parent and Guardian Involvement:</strong> Parents and guardians are often encouraged to
+                be
+                actively involved in their child's personalized learning journey, helping to set goals and monitor
+                progress.
+                <br>
+                Personalized learning has gained popularity as technology has advanced, making it easier to collect and
+                analyze data and provide tailored learning experiences. However, it's important to strike a balance
+                between
+                personalized learning and ensuring that students also acquire essential foundational knowledge and
+                skills.
+                <br>
+                Effective implementation of personalized learning requires a thoughtful approach, ongoing assessment,
+                and a
+                commitment to meeting the diverse needs of learners.
+
+            </p>
+        </div>
+    </div>
+
+    <div id="contactus" class="bg-primary p-5">
+        <div class="container mt-5">
+            <h3 class="text-center">Contact Us</h3>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success mt-4">Submit</button>
+            </form>
+        </div>
+    </div>
+    <button id="goToTopBtn" class="hidden">Top</button> 
+    <footer class="text-center bg-dark text-white p-5">
+        &copy; Copyright 2023
+    </footer>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
