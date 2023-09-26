@@ -1,28 +1,23 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Get references to the login and registration forms
-    var loginForm = document.getElementById("login-form");
-    var registrationForm = document.getElementById("registration-form");
+const sign_btn=document.querySelector('.toggle-btn');
+const container= document.querySelector('.container');
+const signin=document.querySelector('.signin-signup');
+const signup=document.querySelector('.signup-signin');
 
-    // Get references to the login and registration buttons
-    var loginButton = document.getElementById("login-button");
-    var registerButton = document.getElementById("register-button");
-
-    // Add click event listeners to the login and registration buttons
-    loginButton.addEventListener("click", function (e) {
-        e.preventDefault();
-        loginForm.style.display = "block";
-        registrationForm.style.display = "none";
-    });
-
-    registerButton.addEventListener("click", function (e) {
-        e.preventDefault();
-        registrationForm.style.display = "block";
-        loginForm.style.display = "none";
-    });
+let btn="SIGN UP"
+sign_btn.addEventListener('click', ()=>{
+    container.classList.toggle('cont2');
+    if(btn=="SIGN UP"){
+        sign_btn.innerText="SIGN IN";
+        btn="SIGN IN";
+    }else{
+        sign_btn.innerText="SIGN UP";
+        btn="SIGN UP";
+    }
+    signin.classList.toggle("display-none");
+    signup.classList.toggle("display-none")
 });
 
 
-// 
 // Add submit event listener to the registration form
 var registerForm = document.getElementById("register");
 registerForm.addEventListener("submit", function (e) {
@@ -31,6 +26,7 @@ registerForm.addEventListener("submit", function (e) {
     // Get form values
     var fullName = document.getElementById("register-name").value;
     var email = document.getElementById("register-email").value;
+    email = email.replace(/\s+/g, ' ').trim();
     var password = document.getElementById("register-password").value;
 
     // Create an object to store the registration data
@@ -99,5 +95,3 @@ loginForm.addEventListener("submit", function (e) {
         alert("Login failed. Please check your credentials.");
     }
 });
-
-
