@@ -58,12 +58,12 @@
 #loging{
     margin: 0;
     padding: 8px;
-    background: #405510;
+    background: #0099ff;
 }
 
 .carousel{
     height: 200px;
-    background: #405510;
+    background: #0099ff;
 }
 .carousel ul{
     display: flex;
