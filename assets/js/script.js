@@ -48,3 +48,44 @@ document.getElementById("goToTopBtn").addEventListener("click", function() {
         behavior: "smooth" 
     });
 });
+
+
+// clock
+function updateTime() {
+    const date = new Date();
+
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+
+    const m= hours>12 ? "PM": "AM";
+    const f = hours % 12 || 12;
+    const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+    const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
+    const formattedHours = f < 10 ? `0${f}` : f;
+
+    const clock = document.getElementById("samay");
+    clock.textContent = `${formattedHours}  ${formattedMinutes} ${formattedSeconds}  ${m}`;    
+
+}
+
+setInterval(updateTime, 1000);
+
+// loader
+setTimeout(function() {
+    document.getElementById('loader').style.display = 'none';
+  }, 1000);
+
+
+//   
+const flipboxElements = document.querySelectorAll('.stu-ser');
+
+        flipboxElements.forEach((element) => {
+            element.addEventListener('mouseenter', () => {
+                element.querySelector('.flip').style.transform = 'rotateY(180deg)';
+            });
+
+            element.addEventListener('mouseleave', () => {
+                element.querySelector('.flip').style.transform = 'rotateY(0deg)';
+            });
+        });

@@ -7,16 +7,40 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
         }
-        .quiz-container {
-            margin: 20px;
+       
+        #quizUser {
+            font-weight: bold;
+        }
+
+        #result {
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #ff5733; 
+        }
+
+       
+        input[type="submit"] {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <div class="quiz-container">
         <h1>Simple Quiz</h1>
-        <div>Candidate Name : <span id="quizUser"></span></div>
+        <div>Candidate Name: <span id="quizUser"></span></div>
         <div id="timer">Time remaining: 5:00</div>
         <div id="result"></div>
         <form id="quiz-form">
@@ -64,61 +88,8 @@
             </ol>
             <input type="submit" value="Submit">
         </form>
-        
     </div>
 
-    <script>
-        // JavaScript for countdown timer
-        const countdown = document.getElementById('timer');
-        let timeLeft = 300; // 5 minutes in seconds
-
-        function updateTimer() {
-            const minutes = Math.floor(timeLeft / 60);
-            const seconds = timeLeft % 60;
-            countdown.textContent = `Time remaining: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-            if (timeLeft === 0) {
-                clearInterval(timerInterval);
-                submitQuiz();
-            }
-            timeLeft--;
-        }
-
-        const timerInterval = setInterval(updateTimer, 1000);
-
-        // JavaScript for quiz submission and result
-        const quizForm = document.getElementById('quiz-form');
-        const resultDisplay = document.getElementById('result');
-
-        quizForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            clearInterval(timerInterval); // Stop the timer
-            submitQuiz();
-        });
-
-        function submitQuiz() {
-            // Calculate and display the result
-            const score = calculateScore();
-            resultDisplay.textContent = `You scored ${score} out of 5.`;
-        }
-
-        function calculateScore() {
-            let score = 0;
-            const answers = ['c', 'a', 'b', 'c', 'd']; // Add correct answers for each question
-
-            for (let i = 1; i <= 5; i++) {
-                const selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
-                if (selectedAnswer) {
-                    if (selectedAnswer.value === answers[i - 1]) {
-                        score++;
-                    }
-                }
-            }
-
-            return score;
-        }
-
-        let user_name=localStorage.getItem("user-name")
-        document.getElementById("quizUser").innerText = user_name;
-    </script>
+    <script src="../js/test.js"></script>
 </body>
 </html>

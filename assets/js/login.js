@@ -1,20 +1,13 @@
-const sign_btn=document.querySelector('.toggle-btn');
-const container= document.querySelector('.container');
-const signin=document.querySelector('.signin-signup');
-const signup=document.querySelector('.signup-signin');
+const sign_in_btn = document.querySelector("#sign-in-btn");
+const sign_up_btn = document.querySelector("#sign-up-btn");
 
-let btn="SIGN UP"
-sign_btn.addEventListener('click', ()=>{
-    container.classList.toggle('cont2');
-    if(btn=="SIGN UP"){
-        sign_btn.innerText="SIGN IN";
-        btn="SIGN IN";
-    }else{
-        sign_btn.innerText="SIGN UP";
-        btn="SIGN UP";
-    }
-    signin.classList.toggle("display-none");
-    signup.classList.toggle("display-none")
+const container = document.querySelector(".container");
+
+sign_up_btn.addEventListener('click', () => {
+    container.classList.add("sign-up-mode");
+});
+sign_in_btn.addEventListener('click', () => {
+    container.classList.remove("sign-up-mode");
 });
 
 
@@ -51,7 +44,7 @@ registerForm.addEventListener("submit", function (e) {
     document.getElementById("register-password").value = "";
 
     // Provide a message or redirect to another page
-    alert("Registration successful!");
+    showPopup("Registration successful!");
 });
 
 // Add submit event listener to the login form
@@ -69,7 +62,7 @@ loginForm.addEventListener("submit", function (e) {
 
     // Check if there are any registered users
     if (users.length === 0) {
-        alert("No registered users found.");
+        showPopup("No registered users found.");
         return;
     }
 
@@ -92,6 +85,41 @@ loginForm.addEventListener("submit", function (e) {
         window.location.href = 'index.html';
 
     } else {
-        alert("Login failed. Please check your credentials.");
+        showPopup("Login failed. Please check your credentials.");
     }
 });
+
+//  display the popup
+function showPopup(message) {
+    popupMessage.textContent = message;
+    popup.style.display = 'block';
+
+    setTimeout(function () {
+        popup.style.display = 'none';
+    }, 1300);
+}
+
+
+    const popup = document.getElementById('popup');
+    const closeButton = document.getElementById('close-button');
+    const popupMessage = document.getElementById('popup-message');
+
+    closeButton.addEventListener('click', function () {
+        popup.style.display = 'none';
+    });
+    
+// scial-iocon login
+    document.addEventListener('DOMContentLoaded', function () {
+       
+        const socialIcons = document.querySelectorAll('.social-icon');
+    
+        function showMessage() {
+            showPopup("This facility is not available at the moment. Please sign up and log in.");
+        }
+    
+        socialIcons.forEach(function (icon) {
+            icon.addEventListener('click', showMessage);
+        });
+    });
+    
+    
