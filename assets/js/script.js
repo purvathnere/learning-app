@@ -54,27 +54,27 @@ document.getElementById("goToTopBtn").addEventListener("click", function() {
 function updateTime() {
     const date = new Date();
 
-    const hours = String(date.getHours()).padStart(2, '0');
+    const hours = date.getHours();
     const minutes = date.getMinutes();
     const seconds = date.getSeconds();
 
-    const m= hours>12 ? "PM": "AM";
-    const f = hours % 12 || 12;
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    const formattedHours = hours % 12 || 12;
     const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
     const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
-    const formattedHours = f < 10 ? `0${f}` : f;
+    const formatted_Hours = formattedHours < 10 ? `0${formattedHours}` : formattedHours;
 
     const clock = document.getElementById("samay");
-    clock.textContent = `${formattedHours}  ${formattedMinutes} ${formattedSeconds}  ${m}`;    
-
+    clock.textContent = `${formatted_Hours} ${formattedMinutes} ${formattedSeconds} ${ampm}`;
 }
 
 setInterval(updateTime, 1000);
 
+
 // loader
 setTimeout(function() {
     document.getElementById('loader').style.display = 'none';
-  }, 1000);
+  }, 1500);
 
 
 //   

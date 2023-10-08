@@ -20,7 +20,6 @@
             text-align: center;
             font-size: 2em;
             font-weight: bold;
-            margin-top: 20px;
             color: #ff5733; 
         }
 
@@ -35,14 +34,28 @@
             border-radius: 4px;
             cursor: pointer;
         }
+        header{
+            background: #000;
+            position: fixed;
+            top: 0;
+            color: #fff;
+            width: 100vw;
+        }
+        #quiz-form{
+            margin-top: 160px;
+        }
+
     </style>
 </head>
 <body>
     <div class="quiz-container">
+       <header>
         <h1>Simple Quiz</h1>
         <div>Candidate Name: <span id="quizUser"></span></div>
         <div id="timer">Time remaining: 5:00</div>
         <div id="result"></div>
+       </header>
+       
         <form id="quiz-form">
             <ol>
                 <li>
